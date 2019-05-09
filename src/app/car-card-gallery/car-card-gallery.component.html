@@ -1,0 +1,25 @@
+<div class="card m-2" style="width: 55rem;" (click)="carExtraDetail()">
+    <div class="text-center">
+
+        <img class="card-img-top	px-5" src={{carData.image}} alt="Alt">
+    </div>
+
+    <div class="card-body float-left">
+        <span class="float-right"><i class="fas fa-share-alt"></i></span><span class="float-right mr-2"><i class="fas fa-heart ml-2"></i></span>
+        <div>
+            <h4 class="card-title">{{carData.price| currency: 'INR':'symbol':'1.0'}}</h4>
+        </div>
+        <div class="card-text">
+            <div>
+                {{carData.year}} - {{carData.miles}}km
+            </div>
+            <div>
+                <small>{{carData.make}} {{carData.model}},{{carData.year}} {{carData.fuel}}</small>
+            </div>
+            <div>
+                <small>  {{carData.location}},{{carData.city}}  <span class="float-right">{{carData.postedOn}}</span></small>
+            </div>
+
+        </div>
+    </div>
+</div>

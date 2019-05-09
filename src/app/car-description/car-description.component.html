@@ -1,0 +1,31 @@
+<div class="border">
+    <h3 class="m-1">DETAILS</h3>
+    <div class="row m-2">
+        <div class="col-2 text-muted">
+            <div> BRAND</div>
+            <div> YEAR</div>
+            <div> KM DRIVEN </div>
+        </div>
+        <div class="col-2">
+            <div> {{extraCarData.make}}</div>
+            <div> {{extraCarData.year}}</div>
+            <div> {{extraCarData.miles}}</div>
+        </div>
+        <div class="col-2 text-muted">
+            <div> MODEL</div>
+            <div> FUEL</div>
+        </div>
+        <div class="col-2">
+            <div> {{extraCarData.model}}</div>
+            <div> {{extraCarData.fuel}}</div>
+        </div>
+    </div>
+    <hr>
+
+    <h3 class="m-1">Description</h3>
+    <div class="m-2" *ngFor="let desc of extraInfo">
+        <div>
+            {{desc}}
+        </div>
+    </div>
+</div>

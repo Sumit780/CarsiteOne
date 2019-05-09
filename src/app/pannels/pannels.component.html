@@ -1,0 +1,49 @@
+<app-advertisement-banner></app-advertisement-banner>
+<div class="row">
+
+    <div class="col-3">
+
+    </div>
+    <div class="col-9 ">
+        <div class="row border">
+            <div class="col-8">
+
+            </div>
+            <div class="col-1">
+                view
+            </div>
+            <div class="col-1">
+                <i class="fas fa-th" (click)="list(1)"></i>
+            </div>
+            <div class="col-1">
+                <i class="fas fa-list-ul" (click)="grid(2)"></i>
+            </div>
+            <div class="col-1">
+                <i class="fas fa-desktop" (click)="gallery(3)"> </i>
+            </div>
+
+        </div>
+        <div class="row border">
+            <div *ngIf="cardGrid == true">
+                <div class="row">
+                    <div class="col" *ngFor="let car of carData">
+                        <app-car-card [carData]=car></app-car-card>
+                    </div>
+                </div>
+
+            </div>
+            <div *ngIf="cardList == true">
+                <div class="col" *ngFor="let car of carData">
+                    <app-car-card-list [carData]=car></app-car-card-list>
+                </div>
+            </div>
+            <div *ngIf="cardGallery == true">
+                <div class="col" *ngFor="let car of carData">
+                    <app-car-card-gallery [carData]=car></app-car-card-gallery>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
